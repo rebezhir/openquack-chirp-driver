@@ -363,7 +363,7 @@ DTMF_DECODE_RESPONSE_LIST = ["None", "Ring", "Reply", "Both"]
 
 KEYACTIONS_LIST = ["None", "Flashlight on/off", "Power select",
                    "Monitor", "Scan on/off", "VOX on/off",
-                   "Alarm on/off", "FM radio on/off", "Transmit 1750Hz"]
+                   "VFO/MR", "A/B", "Transmit 1750Hz"]
 
 
 # the communication is obfuscated using this fine mechanism
