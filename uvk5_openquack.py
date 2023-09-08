@@ -616,7 +616,7 @@ def _find_band(self, hz):
 class UVK5Radio(chirp_common.CloneModeRadio):
     """Quansheng UV-K5"""
     VENDOR = "Quansheng"
-    MODEL = "UV-K5"
+    MODEL = "UV-K5 OpenQUACK firmware"
     BAUD_RATE = 38400
     NEEDS_COMPAT_SERIAL = False
     FIRMWARE_VERSION = ""
@@ -2016,17 +2016,4 @@ class UVK5Radio(chirp_common.CloneModeRadio):
         return mem
 
 
-@directory.register
-class UVK5Radio_nolimit(UVK5Radio):
-    VENDOR = "Quansheng"
-    MODEL = "UV-K5 OpenQUACK (unlimited RX/TX)"
-    VARIANT = "nolimits"
-    FIRMWARE_NOLIMITS = True
 
-    def get_features(self):
-        rf = UVK5Radio.get_features(self)
-        # This is what the BK4819 chip supports
-        rf.valid_bands = [(18000000,  620000000),
-                          (840000000, 1300000000)
-                          ]
-        return rf
