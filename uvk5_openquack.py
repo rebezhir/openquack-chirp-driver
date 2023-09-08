@@ -46,7 +46,7 @@ DEBUG_SHOW_OBFUSCATED_COMMANDS = False
 DEBUG_SHOW_MEMORY_ACTIONS = False
 
 # TODO: remove the driver version when it's in mainline chirp
-DRIVER_VERSION = "Quansheng UV-K5 driver v20230626 (c) Jacek Lipkowski SQ5BPF"
+DRIVER_VERSION = "Quansheng UV-K5 OpenQUACK Firmware"
 
 MEM_FORMAT = """
 #seekto 0x0000;
@@ -2019,7 +2019,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
 @directory.register
 class UVK5Radio_nolimit(UVK5Radio):
     VENDOR = "Quansheng"
-    MODEL = "UV-K5 (modified firmware)"
+    MODEL = "UV-K5 OpenQUACK (unlimited RX/TX)"
     VARIANT = "nolimits"
     FIRMWARE_NOLIMITS = True
 
